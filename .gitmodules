@@ -1,0 +1,3 @@
+[submodule "docker-cache"]
+	path = docker-cache
+	url = git@github.com:whitel/vagrant-cachier.git

@@ -1,0 +1,6 @@
+Vagrant.configure(2) do |config|
+    config.vm.box = "cdk-2-b3"
+    config.vm.synced_folder '/mnt/vms/docker-images', '/mnt/host-docker-images', type: 'nfs', nfs_udp:  false, nfs_version: 4
+    #, nfs_export: false
+    config.vm.provision 'shell', inline: "./sync/load-all.sh || : "
+end
